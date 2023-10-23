@@ -2,7 +2,8 @@ import React, { useEffect, useState, useContext } from "react";
 import Card from "../../../../components/tools/card";
 import axios from "axios";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import { BsFillDropletFill } from "react-icons/bs";
+import TitleFlowers from "../../../../components/tools/title";
+
 import Favorites from "./favorites";
 import { Link } from "react-router-dom";
 
@@ -25,16 +26,14 @@ const Tattoo = () => {
     <section className=" bg-white">
       <hr className="border-black" />
       <div className=" flex items-center justify-center my-8">
-        <input
-          type="text"
-          placeholder="Search"
-          className="border-[1px] border-black rounded-lg w-[30rem] p-1 px-2"
-          name=""
-          id=""
-        />
+      <div class="InputContainer">
+  <input placeholder="Search.." id="input" class="input" name="text" type="text">
+   </input>
+  
+</div>
       </div>
       <div className="flex items-center justify-center  py-8 ">
-        <h1 className="text-4xl pr-1"> Tattoos</h1><BsFillDropletFill size={25}/>
+        <TitleFlowers text1="Tattoo" />
       </div>
       <div className="flex justify-center text-center items-center">
         <p className="mr-1 text-xl">Vous avez besoin d'idées ?</p><span className="ml-1 text-xl"> nous sommes la pour vous en proposer</span>
@@ -48,11 +47,11 @@ const Tattoo = () => {
                 <Link to={`/categorie/${tattoo.id}`}>
                   <Card 
                     id={tattoo.id}
-                    className="m-2 flex flex-col items-center justify-center hover:scale-105 hover:transition hover:z-10"
+                    className="flex items-center justify-center"
                     images={tattoo.images}
                   />
                 </Link>
-                <div className=" flex items-center justify-center lg:ml-8">
+                <div className=" flex items-center justify-center my-2 ">
                   <button type="button" className={""}>
                     {total.includes(tattoo.images) ? (
                       <AiFillHeart

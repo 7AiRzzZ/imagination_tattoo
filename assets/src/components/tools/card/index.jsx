@@ -1,13 +1,21 @@
 import React from "react";
 
 import PropTypes from "prop-types";
-import axios from "axios";
 
 const Card = ({ id, className, favorite, images }) => {
   return (
     <>
-      <div className={`border-[3px] border-black rounded-md shadow-2xl h-[250px] w-[250px]  ${className}`}>
-        <img className="" height={250} width={250} src={images} alt="Tattoo-" />
+      <div class="container mx-16">
+        <div class={`card ${className}`}>
+          {" "}
+          <img
+            className=""
+            height={150}
+            width={150}
+            src={images}
+            alt="Tattoo-"
+          />
+        </div>
       </div>
     </>
   );
@@ -19,3 +27,4 @@ Card.propTypes = {
 };
 
 export default Card;
+

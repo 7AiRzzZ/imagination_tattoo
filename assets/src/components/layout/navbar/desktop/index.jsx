@@ -6,7 +6,7 @@ import { MdOutlineFavoriteBorder } from "react-icons/md";
 const D = () => {
   return (
     <header>
-      <nav className="bg-black fixed py-2 w-full">
+      <nav className="bg-black fixed py-2 w-full z-50">
         <div className="flex flex-row w-full items-center justify-center text-white text-2xl font-bold">
           <div>
             <img
