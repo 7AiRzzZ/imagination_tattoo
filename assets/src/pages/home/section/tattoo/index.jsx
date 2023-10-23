@@ -36,6 +36,9 @@ const Tattoo = () => {
       <div className="flex items-center justify-center  py-8 ">
         <h1 className="text-4xl pr-1"> Tattoos</h1><BsFillDropletFill size={25}/>
       </div>
+      <div className="flex justify-center text-center items-center">
+        <p className="mr-1 text-xl">Vous avez besoin d'idées ?</p><span className="ml-1 text-xl"> nous sommes la pour vous en proposer</span>
+      </div>
       <div className="flex items-center justify-center pb-12">
         <div className="grid grid-cols-2 lg:grid-cols-5 lg:mx-8">
           {tattoos.map((tattoo) => {

@@ -34,22 +34,22 @@
     "encore": "encore dev",
     "watch": "encore dev --watch",
     "build": "encore production --progress",
-    "test": "echo Error: no test specified && exit 1"
+    "test": "echo Error: no test specified && exit 1",
+    "prod:node": "pnpm install && pnpm run prod:autoloader ",
+    "prod:build": "encore production --progress"
   },
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@api-platform/admin": "^3.4.4",
     "anchor-link": "^3.5.1",
     "anchor-link-browser-transport": "^3.5.1",
-    "react-sketch-canvas": "^6.2.0",
-    "react-type-animation": "^3.1.0",
-    "scroll-carousel-react": "^1.0.0",
-    "@api-platform/admin": "^3.4.4",
     "axios": "^1.5.0",
     "country-flag-icons": "^1.5.7",
     "dotenv-webpack": "^8.0.1",
     "flag-icons": "^6.11.1",
     "flowbite": "^1.8.1",
+    "gsap": "^3.12.2",
     "npm-run-all": "^4.1.5",
     "process": "^0.11.10",
     "prop-types": "^15.8.1",
@@ -61,6 +61,9 @@
     "react-icons": "^4.11.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.15.0",
-    "reactjs-popup": "^2.0.6"
+    "react-sketch-canvas": "^6.2.0",
+    "react-type-animation": "^3.1.0",
+    "reactjs-popup": "^2.0.6",
+    "scroll-carousel-react": "^1.0.0"
   }
 }
