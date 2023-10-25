@@ -56,8 +56,8 @@ security:
     # - { path: ^/api/login, roles: PUBLIC_ACCESS }
     # - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
     - { path: ^/api/(tattoos), roles: ROLE_ADMIN, methods: ["POST", "PUT", "DELETE"] }
-    - { path: ^/api/(products), roles: ROLE_ADMIN, methods: ["POST", "PUT", "DELETE"] }
-    - { path: ^/api/(users), roles: ROLE_USER, methods: ["PUT"] }
+    - { path: ^/api/(creations), roles: ROLE_USER, methods: ["POST", "PUT", "DELETE"] }
+    - { path: ^/api/(users), roles: ROLE_USER, methods: ["GET", "PUT"] }
     - { path: ^/api/(users), roles: ROLE_ADMIN, methods: ["GET", "POST", "PUT", "DELETE"] }
 
     - { path: ^/api/(login|token/refresh), roles: PUBLIC_ACCESS }

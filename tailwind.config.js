@@ -2,13 +2,17 @@
 module.exports = {
   content: [
     "./assets/src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./templates/**/*.html.twig",],
+    "./templates/**/*.html.twig",
+  ],
   theme: {
     extend: {},
     backgroundImage: {
-      'bg-tattoo': "url('http://localhost:8000//images/tattooroom.jpg')",
-      
-    }
+      "bg-tattoo": "url('http://localhost:8000//images/tattooroom.jpg')",
+    },
+
+    fontFamily: {
+      BodoniXT: ["BodoniXT"],
+    },
   },
   plugins: [],
 };

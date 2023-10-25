@@ -26,11 +26,7 @@ const Tattoo = () => {
     <section className=" bg-white">
       <hr className="border-black" />
       <div className=" flex items-center justify-center my-8">
-      <div class="InputContainer">
-  <input placeholder="Search.." id="input" class="input" name="text" type="text">
-   </input>
-  
-</div>
+    
       </div>
       <div className="flex items-center justify-center  py-8 ">
         <TitleFlowers text1="Tattoo" />
