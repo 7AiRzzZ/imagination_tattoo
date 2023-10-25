@@ -16,25 +16,40 @@ const D = () => {
               width={70}
             />
           </div>
-          <div className=" grid col-start-3">
+          <div className=" grid  2xl:col-start-2">
             <div className="flex flex-row justify-center items-center">
               <div>
-                <button className=" text-2xl  mx-8 text-center  BodoniXT  " type="button">
+                <button
+                  className=" lg:text-3xl lg:mx-8 
+                   text-center font-ImperatorBold  "
+                  type="button"
+                >
                   <Link to={"/accueil"}>Accueil</Link>
                 </button>
               </div>
               <div>
-                <button className=" text-2xl mx-8 text-center " type="button">
+                <button
+                  className=" lg:text-3xl lg:mx-8  text-center font-ImperatorBold "
+                  type="button"
+                >
                   <Link to={"/tattoo"}>Tattoo</Link>
                 </button>
               </div>
               <div>
-                <button className=" text-2xl mx-8 text-center " type="button">
-                  <Link to={"/categorie"}>Categorie</Link>
+                <button
+                  className=" lg:text-3xl lg:mx-8 text-center font-ImperatorBold "
+                  type="button"
+                >
+                  <Link className="" to={"/categorie"}>
+                    Categorie
+                  </Link>
                 </button>
               </div>
               <div>
-                <button className=" text-2xl mx-8 text-center " type="button">
+                <button
+                  className=" lg:text-3xl lg:mx-8  text-center font-ImperatorBold "
+                  type="button"
+                >
                   <Link to={"/custom"}>Custom</Link>
                 </button>
               </div>
@@ -64,7 +79,7 @@ const D = () => {
             </div>
           </div>
         </div>
-      <hr className=" border-black mt-2 " />
+        <hr className=" border-black mt-2 " />
       </nav>
     </header>
   );

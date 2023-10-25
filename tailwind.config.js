@@ -5,13 +5,14 @@ module.exports = {
     "./templates/**/*.html.twig",
   ],
   theme: {
-    extend: {},
-    backgroundImage: {
-      "bg-tattoo": "url('http://localhost:8000//images/tattooroom.jpg')",
-    },
-
-    fontFamily: {
-      BodoniXT: ["BodoniXT"],
+    extend: {
+      backgroundImage: {
+        "bg-tattoo": "url('http://localhost:8000//images/tattooroom.jpg')",
+      },
+      fontFamily: {
+        Imperator: ["imperator", "truetype"],
+        ImperatorBold: ["Imperator-Bold", "truetype"],
+      },
     },
   },
   plugins: [],

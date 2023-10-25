@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import Navbar from "../../components/layout/navbar";
 import Acceuil from "./section/acceuil";
 import Tattoo from "./section/tattoo";
@@ -10,6 +11,7 @@ import FooterMobile from "../../components/layout/footer/mobile";
 const Home = () => {
   return (
     <section>
+      {/* <video src="/videos/edit.mp4"></video> */}
       <Navbar />
       <Acceuil />
       <Tattoo />

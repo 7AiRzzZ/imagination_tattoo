@@ -4,13 +4,16 @@ import { BsArrowDown } from "react-icons/bs";
 import CardBackground from "../../../../components/tools/cardBackground";
 
 
+
 const Acceuil = () => {
   return (
     <section className="">
-          <CardBackground className= "bg-[url('http://localhost:8000/images/tattooroom.jpg')] ">
-      <div className="flex flex-col items-center justify-center pt-64">
+          <CardBackground className= "">
+          <video autoPlay loop muted  src="../videos/tatouage.mp4">
+                </video>
+      <div className="flex flex-col items-center justify-center pt-56 z-40">
         <div className="flex flex-row my-4">
-            <h1 className=" text-6xl font-bold">Imagination</h1>
+            <h1 className=" text-6xl  font-ImperatorBold text-white">Imagination</h1>
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
@@ -21,21 +24,21 @@ const Acceuil = () => {
               ]}
               wrapper="span"
               speed={50}
-              className="text-6xl text-red-500 font-bold"
+              className="text-6xl text-red-500 font-ImperatorBold"
               repeat={Infinity}
             />
         </div>
-        <div className="flex my-16 text-center  mx-32">
-          <p className="text-3xl font-bold">
+        <div className="flex  text-center mt-16 mx-32">
+          <p className="text-3xl font-Imperator text-white">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
             et odio nobis quod voluptatem commodi consequuntur facere? A hic
             vitae ducimus labore! Quas commodis?
           </p>
         </div>
         <div>
-          <div className="flex justify-center mt-16 items-center">
+          <div className="flex justify-center mt-32 items-center">
             <a offset={() => 100} href="">
-              <BsArrowDown className=" arrow bounce " size={50} onClick={""} />
+              <BsArrowDown className=" arrow  bounce text-white " size={50} onClick={""} />
             </a>
           </div>
         </div>

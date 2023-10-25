@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 const CardBackground = ({ className, children }) => {
   return (
-    <div
-      className={`h-screen ${className}`}
-    >
+    <div className={`h-screen ${className}`}>
+  
+
       {children}
     </div>
   );

@@ -4,7 +4,7 @@ const TitleFlowers = ({text1}) => {
   return (
     <button class="btn">
       <div class="wrapper">
-        <p class="text">{text1} </p>
+        <p class="text font-Imperator ">{text1} </p>
 
         <div class="flower flower1">
           <div class="petal one"></div>

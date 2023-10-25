@@ -2,11 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: "BodoniXT";
-  src: url("../fonts/pixeloid/PixeloidSans.ttf") format("truetype");
-} */
+@font-face {
+  font-family: "Imperator";
+  src: url(".././fonts/Imperator.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ImperatorBold";
+  src: url(".././fonts/Imperator\ Bold.ttf") format("truetype");
+}
 
+video {
+width: 100%;
+height: 100vh;
+object-fit: cover;
+margin: 0;
+padding: 0;
+z-index: -1;
+position: absolute;
+}
 .contain {
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -39,7 +52,22 @@
 .bounce {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
+  animation: bounce 2s ease infinite;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 .InputContainer {
   width: 490px;
@@ -89,7 +117,8 @@
 }
 
 .text {
-  font-size: 24px;
+  font-size: 28px;
+  
   z-index: 1;
   color: #000;
   padding: 4px 12px;
@@ -264,97 +293,56 @@
 }
 
 /* ------------------------------------------------------------------ CARD TATTOO ------------------------------------------------------------------------- */
-
 .card {
-  position: relative;
   width: 190px;
   height: 254px;
-  background: lightgrey;
-  box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.75);
-  z-index: 1;
-  border-radius: 21px;
-  overflow: hidden;
-  transform: rotate(-2deg);
-}
-
-.card__content {
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.473),
-    rgba(150, 150, 150, 0.25)
-  );
-  z-index: 1;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+ }
+ 
+ .card-details {
+  color: black;
   height: 100%;
-  border-radius: 21px;
-}
-
-.blob {
+  gap: .5em;
+  display: grid;
+  place-content: center;
+ }
+ 
+ .card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #c35e5e;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
   position: absolute;
-  z-index: -1;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  filter: blur(15px);
-  opacity: 0.5;
-}
-
-.blob-1 {
-  left: -65px;
-  top: -45px;
-  background: #a6a6a6;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #0d0d0d, #0d0d0d, #a6a6a6);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #404040, #0d0d0d, #0d0d0d);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  transform: rotate(12deg);
-}
-
-.blob-2 {
-  left: -30px;
-  top: 120px;
-  background: #a8eb12;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #54c0ec, #a8eb12);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #f2f2f2, #737373);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  transform: rotate(20deg);
-}
-
-.blob-3 {
-  right: -60px;
-  bottom: -10px;
-  background: #cc2e5c;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #0d0d0d, #404040);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #0d0d0d, #404040);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  transform: rotate(-10deg);
-}
-
-.blob-4 {
-  right: -70px;
-  top: 20px;
-  background: #ffa17f;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom right,
-    #b993d6,
-    #0d0d0d,
-    #ffa17f
-  );
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom right, #b993d6, #f2f2f2, #ffa17f);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  transform: rotate(-25deg);
-}
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ 
+ 
+ 
+ 
+ 
+ /*Hover*/
+ .card:hover {
+  border-color: #c35e5e;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ 
+ .card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+ }
 /* ------------------------------------------------------------------ CARD CREATIONS ------------------------------------------------------------------------- */
 .cardcreation {
   --card-color: #000000;
@@ -496,3 +484,5 @@
   color: var(--blub-color);
   cursor: pointer;
 }
+/* -------------------------------------------------------------------------------- */
+
