@@ -33,7 +33,7 @@ const Tattoo = () => {
       <div className="flex justify-center text-center items-center  my-8">
         <MovingText
         
-          className="text-2xl font-Imperator di"
+          className="text-2xl font-Imperator"
           type="slideInFromLeft"
           duration="2000ms"
           delay="0s"
