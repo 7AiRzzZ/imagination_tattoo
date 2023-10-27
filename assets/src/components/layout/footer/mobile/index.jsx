@@ -1,36 +1,46 @@
 import React from "react";
-import { FiUser} from "react-icons/fi";
-import {MdOutlineFavoriteBorder} from "react-icons/md";
+import { FiUser } from "react-icons/fi";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
+import SocialIcon from "../../../tools/SocialLink";
+import FormContact from "../../../tools/form";
 
-const FooterMobile = () =>{
-    return(
-<footer className="">
-<hr className="border-black" />
-      <div className=" bg-gray-200">
-        <div className=" grid grid-cols-3 divide-x divide-black justify-center text-center py-4 px-4">
-          <div className=" flex items-center justify-center align-middle">
-            <img src="/images/logo-imgtattoo.png" height={70} width={70} alt="ImaginationTattoo" />
-          </div>
-          <div className="flex justify-center items-center">
-            <FiUser size={30} className="text-black mx-4 hover:transition hover:ease-out hover:duration-200 hover:scale-110 hover:text-red-500/70"/>
-            <MdOutlineFavoriteBorder size={30} className="text-black mx-4 hover:transition hover:ease-out hover:duration-200 hover:scale-110 hover:text-red-500/70"/>
-
-
-          </div>
-          <div className="text-xs text-black text-center flex flex-col items-center justify-center ">
-            <p className="hover:transition hover:ease-out hover:duration-200 hover:scale-110 hover:text-red-500/70">Mentions Légales</p>
-            <br />
-            <p className="hover:transition hover:ease-out hover:duration-200 hover:scale-110 hover:text-red-500/70">Politique de confidentialité</p>
-          </div>
+const FooterMobile = () => {
+  return (
+    <footer className=" bg-black/90">
+      <div className="grid grid-cols-[40%,40%,20%] h-full w-full py-12 ">
+        <div className=" flex flex-col items-center justify-center text-center">
+          <SocialIcon />
+          <p className=" my-8  text-2xl text-white font-ImperatorBold hover:transition hover:ease-out hover:duration-200 hover:scale-110 hover:text-red-500/70">
+            {" "}
+            ©ImaginationTattoo{" "}
+          </p>
+          <p className="  text-2xl text-white font-ImperatorBold hover:transition hover:ease-out hover:duration-200 hover:scale-110 hover:text-red-500/70">
+            {" "}
+            2023-2023{" "}
+          </p>
         </div>
-        <hr className=" border-black mx-4" />
-        <div className="text-xs text-black  divide-x divide-black text-center flex items-center justify-center py-4 ">
-          <p className="pr-2 hover:transition hover:ease-out hover:duration-200 hover:scale-110 hover:text-red-500/70"> ©ImaginationTattoo </p>
-          <p className="pl-2 hover:transition hover:ease-out hover:duration-200 hover:scale-110 hover:text-red-500/70"> 2023-2023 </p>
+        <div className=" flex flex-col items-center justify-center ">
+          <div className=" my-8">
+
+         <h1 className=" text-3xl text-white uppercase font-ImperatorBold hover:transition hover:ease-out hover:duration-200 hover:text-red-500/70"> About </h1>
+         <hr className=" border-[1px] border-white w-[60px]  hover:duration-200 hover:w-[90px]" />
+          </div>
+         <p className="text-white font-Imperator text-xl hover:transition hover:ease-out hover:duration-200 ">Innovante et engagée, notre entreprise <span className="text-red-500/70">Imagination Tattoo</span> repousse les limites pour offrir des solutions exceptionnelles à nos clients, tout en plaçant l'éthique et la qualité au cœur de notre mission.</p>
+
+       </div>
+        <div className="flex flex-col items-center justify-center">
+          <img
+            className=""
+            height={150}
+            width={150}
+            src="/images/logo-imgtattoo.png"
+            alt=""
+          />
+         
         </div>
       </div>
-</footer>
-    );
+    </footer>
+  );
 };
 
 export default FooterMobile;

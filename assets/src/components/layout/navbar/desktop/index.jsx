@@ -1,11 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import ReactDOM from "react-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Link } from "react-router-dom";
 import { BiUserCircle } from "react-icons/bi";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 const D = () => {
-  const [showCategorieMenu, setShowCategorieMenu] = useState(false);
   return (
     <header>
       <nav className="bg-white fixed  w-full z-50 ">
@@ -23,60 +24,111 @@ const D = () => {
               <div>
                 <button
                   className=" lg:text-3xl lg:mx-8 
-                   text-center font-ImperatorBold  "
+                   text-center font-ImperatorBold  hover:transition hover:ease-out hover:duration-200 hover:scale-110 hover:text-red-500/70 "
                   type="button"
                 >
-                  <Link to={"https://imagination-tattoo.dupreportfolio.fr/"}>
-                    Accueil
-                  </Link>
+                  <Link to={"http://localhost:8000/"}>Accueil</Link>
                 </button>
               </div>
               <div>
                 <button
-                  className=" lg:text-3xl lg:mx-8  text-center font-ImperatorBold "
+                  className=" lg:text-3xl lg:mx-8  text-center font-ImperatorBold  hover:transition hover:ease-out hover:duration-200 hover:scale-110 hover:text-red-500/70"
                   type="button"
                 >
-                  <Link to={"/tattoo"}>Tattoo</Link>
+                  <AnchorLink  offset={() => 100} href={"#tattoo"}>Tattoo</AnchorLink>
                 </button>
               </div>
 
               <div>
                 <button
-                  className=" lg:text-3xl lg:mx-8 text-center font-ImperatorBold "
+                  id="dropdownHoverButton"
+                  data-dropdown-toggle="dropdownHover"
+                  data-dropdown-trigger="hover"
+                  class="lg:text-3xl lg:mx-8  text-center font-ImperatorBold  hover:transition hover:ease-out hover:duration-200 hover:scale-110 hover:text-red-500/70 focus:ring-4 focus:outline-none focus:ring-blue-300 "
                   type="button"
                 >
-                  <Link className="" to={"/categorie"}>
-                    <ul>
-                      <li
-                        className=""
-                        onMouseEnter={() => setShowCategorieMenu(true)}
-                        onMouseLeave={() => setShowCategorieMenu(false)}
-                      >
-                        categorie
-                        {showCategorieMenu && (
-                          <div className=" h-60 w-32 flex">
-                            <ul className=" grid grid-cols-3 z-10">
-                              <li className="hover:text-red-500/7">1</li>
-                              <li className="hover:text-red-500/7">2</li>
-                              <li className="hover:text-red-500/7">3</li>
-                              <li className="hover:text-red-500/7">4</li>
-                              <li className="hover:text-red-500/7">5</li>
-                              <li className="hover:text-red-500/7">6</li>
-                              <li className="hover:text-red-500/7">7</li>
-                              <li className="hover:text-red-500/7">8</li>
-                              <li className="hover:text-red-500/7">9</li>
-                              <li className="hover:text-red-500/7">10</li>
-                            </ul>
-                          </div>
-                        )}
+                  Categorie{" "}
+                </button>
+                <Link className="" to={"/categorie"}>
+                  <div
+                    id="dropdownHover"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownHoverButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-ImperatorBold text-xl hover:text-red-500/70"
+                        >
+                          BODY PART
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-ImperatorBold text-xl hover:text-red-500/70"
+                        >
+                          STYLE
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-ImperatorBold text-xl hover:text-red-500/70"
+                        >
+                          ANIMAL
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-ImperatorBold text-xl hover:text-red-500/70"
+                        >
+                          SPIRITUAL
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-ImperatorBold text-xl hover:text-red-500/70"
+                        >
+                          NATURE
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-ImperatorBold text-xl hover:text-red-500/70"
+                        >
+                          CONNECTION
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-ImperatorBold text-xl hover:text-red-500/70"
+                        >
+                          FANTASY
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-ImperatorBold text-xl hover:text-red-500/70"
+                        >
+                          SYMBOLS & QUOTES
+                        </a>
                       </li>
                     </ul>
-                  </Link>
-                </button>
+                  </div>
+                </Link>
               </div>
               <div>
                 <button
-                  className=" lg:text-3xl lg:mx-8  text-center font-ImperatorBold "
+                  className=" lg:text-3xl lg:mx-8  text-center font-ImperatorBold  hover:transition hover:ease-out hover:duration-200 hover:scale-110 hover:text-red-500/70"
                   type="button"
                 >
                   <Link to={"/custom"}>Custom</Link>
@@ -112,6 +164,8 @@ const D = () => {
       </nav>
     </header>
   );
+  ReactDOM.render(
+    <SmoothScroll />,
+    document.getElementById('content'))
 };
-
 export default D;
